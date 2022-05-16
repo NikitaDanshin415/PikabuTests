@@ -21,6 +21,15 @@ public class PikabuTests  {
             .entrySet()
             .forEach(System.out::println);
 
+        System.out.println("-------------------------");
+
+        Properties p = System.getProperties();
+        Enumeration keys = p.keys();
+        while (keys.hasMoreElements()) {
+            String key = (String)keys.nextElement();
+            String value = (String)p.get(key);
+            System.out.println(key + ": " + value);
+        }
     }
 
 //    @Test
