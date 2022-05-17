@@ -1,11 +1,19 @@
 package tools.pageobjects;
 
+import tools.pageelements.AuthBlock;
 import tools.pageelements.Header;
+import tools.pageelements.RegisterBlock;
 
 public abstract class BasePage {
-    Header header = new Header();
-
     public Header getHeader() {
-        return header;
+        return new Header();
+    }
+
+    public RegisterBlock getRegisterBlock() {
+        return new RegisterBlock();
+    }
+
+    public AuthBlock getAuthBlock() {
+        return new AuthBlock();
     }
 }
