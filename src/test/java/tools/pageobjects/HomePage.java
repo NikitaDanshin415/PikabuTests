@@ -9,7 +9,7 @@ public class HomePage extends BasePage {
     private final ElementsCollection articleList = $$("article.story");
 
     @Step("Открытие первого поста")
-    public HomePage openArticle(){
+    public HomePage openStory(){
         articleList
             .get(0)
             .$(".story__title")

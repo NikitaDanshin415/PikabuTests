@@ -46,8 +46,14 @@ allure {
     }
 }
 
+//test {
+//    useJUnitPlatform()
+//}
+
 test {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        includeTags 'regress'
+    }
 }
 
 tasks.withType(Test) {
