@@ -20,18 +20,22 @@ public class InputField {
         return this;
     }
 
-    public void fieldIsValid() {
+    public InputField fieldIsValid() {
         inputField
             .parent().parent()
             .shouldNotHave(Condition.cssClass("input_error"));
+
+        return this;
     }
 
-    public void fieldIsNotValid(String text) {
+    public InputField fieldIsNotValid(String text) {
         inputField
             .parent().parent()
             .shouldHave(Condition.cssClass("input_error"));
 
         new NotificationPopup()
             .formIsVisible(text);
+
+        return this;
     }
 }
