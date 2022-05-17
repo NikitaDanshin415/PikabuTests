@@ -3,11 +3,11 @@ package tools.pageelements;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import tools.interfaces.IsVisible;
+
 
 import static com.codeborne.selenide.Selenide.$;
 
-public class RegisterBlock implements IsVisible<RegisterBlock> {
+public class RegisterBlock {
     private final SelenideElement registerForm = $("[data-id='signup']");
 
     private final SelenideElement emailInput = registerForm.$("input[name='email']");
@@ -18,7 +18,7 @@ public class RegisterBlock implements IsVisible<RegisterBlock> {
      * Проверка видимости формы.
      */
     @Step("Форма отображается")
-    public RegisterBlock isVisible(){
+    public RegisterBlock formIsVisible(){
         registerForm
             .shouldBe(Condition.visible);
 
@@ -160,6 +160,4 @@ public class RegisterBlock implements IsVisible<RegisterBlock> {
 
         return this;
     }
-
-
 }

@@ -15,7 +15,7 @@ public class PasswordField extends InputField {
     private final SelenideElement minimumOneLetter = rulesList.get(1);
     private final SelenideElement minimumOneDigit = rulesList.get(2);
 
-    public PasswordField allRulesClear() {
+    public void allRulesClear() {
         rulesList
             .asDynamicIterable()
             .forEach(e -> {
@@ -23,10 +23,9 @@ public class PasswordField extends InputField {
                     .shouldBe(Condition.empty);
             });
 
-        return this;
     }
 
-    public PasswordField allRulesValid() {
+    public void allRulesValid() {
         rulesList
             .asFixedIterable()
             .forEach(e -> {
@@ -34,25 +33,21 @@ public class PasswordField extends InputField {
                     .shouldHave(Condition.cssClass("icon--auth__success"));
             });
 
-        return this;
     }
 
-    public PasswordField sixCharsRuleValid() {
+    public void sixCharsRuleValid() {
         ruleValid(moreThat6chars);
 
-        return this;
     }
 
-    public PasswordField oneLetterRuleValid() {
+    public void oneLetterRuleValid() {
         ruleValid(minimumOneLetter);
 
-        return this;
     }
 
-    public PasswordField oneDigitRuleValid() {
+    public void oneDigitRuleValid() {
         ruleValid(minimumOneDigit);
 
-        return this;
     }
 
     private void ruleValid(SelenideElement el) {

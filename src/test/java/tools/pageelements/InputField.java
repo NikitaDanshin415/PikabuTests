@@ -32,6 +32,6 @@ public class InputField {
             .shouldHave(Condition.cssClass("input_error"));
 
         new NotificationPopup()
-            .popupIsVisible(text);
+            .formIsVisible(text);
     }
 }

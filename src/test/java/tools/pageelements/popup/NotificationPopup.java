@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class NotificationPopup {
     private final SelenideElement popup = $(".popup__wrapper");
 
-    public NotificationPopup popupIsVisible(String text){
+    public NotificationPopup formIsVisible(String text){
         popup
             .shouldBe(Condition.visible)
             .shouldHave(Condition.text(text));

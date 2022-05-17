@@ -46,18 +46,9 @@ allure {
     }
 }
 
-//test {
-//    useJUnitPlatform()
-//}
-
-test {
-    useJUnitPlatform {
-        includeTags 'regress'
-    }
-}
-
 tasks.withType(Test) {
     systemProperties(System.getProperties())
+
     useJUnitPlatform()
 
     testLogging {
@@ -65,5 +56,11 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+
+task regress(type: Test) {
+    useJUnitPlatform {
+        includeTags 'regress'
     }
 }

@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -8,11 +9,17 @@ import tools.pageobjects.HomePage;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
+@DisplayName("Тесты формы регистрации")
+@Tag("register")
+@Epic("Аутентификация")
 public class RegisterFormTest extends BaseTest {
     HomePage homePage = new HomePage();
 
     @Test
-    @DisplayName("Проверка формы регистрации")
+    @DisplayName("Проверка валидации формы регистрации")
+    @Tag("regress")
+    @Feature("Регистрация")
+    @Severity(SeverityLevel.BLOCKER)
     void registerTest() {
         $(".button_main.button_success")
             .click();
@@ -26,7 +33,7 @@ public class RegisterFormTest extends BaseTest {
         step("Проверка поля Email", () -> {
             homePage
                 .getRegisterBlock()
-                .isVisible()
+                .formIsVisible()
                 .fillEmail("test")
                 .emailIsNotValid("Неверный email")
                 .fillEmail("test@qaGuru.ru")
@@ -36,7 +43,7 @@ public class RegisterFormTest extends BaseTest {
         step("Проверка поля NickName", () -> {
             homePage
                 .getRegisterBlock()
-                .isVisible()
+                .formIsVisible()
                 .fillNickName("test")
                 .nickNameIsNotValid("Логин занят")
                 .fillNickName("testwgrbotni")
@@ -46,7 +53,7 @@ public class RegisterFormTest extends BaseTest {
         step("Проверка поля Password", () -> {
             homePage
                 .getRegisterBlock()
-                .isVisible()
+                .formIsVisible()
                 .checkClearRules()
                 .fillPassword("test")
                 .oneLetterRuleIsValid()
