@@ -46,7 +46,7 @@ public class RegisterFormTest extends BaseTest {
                 .formIsVisible()
                 .fillNickName("test")
                 .nickNameIsNotValid("Логин занят")
-                .fillNickName("testwgrbotni")
+                .fillNickName("testwgrbotni123")
                 .nickNameIsValid();
         });
 

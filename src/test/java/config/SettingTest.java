@@ -12,6 +12,8 @@ public class SettingTest {
     public void configure(){
         Configuration.browser = WebDriverProvider.config.getBrowser();
         Configuration.baseUrl = "https://pikabu.ru/";
+        Configuration.browserSize = "1920x1080";
+
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -26,6 +28,7 @@ public class SettingTest {
         if (WebDriverProvider.config.isRemote()) {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
+
             Configuration.remote = "https://"
                 + WebDriverProvider.config.getRemoteLogin()
                 + ":" + WebDriverProvider.config.getRemotePassword()

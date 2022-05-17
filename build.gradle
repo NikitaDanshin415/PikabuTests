@@ -64,3 +64,10 @@ task regress(type: Test) {
         includeTags 'regress'
     }
 }
+
+task parallelRegress(type: Test) {
+    useJUnitPlatform {
+        includeTags 'regress'
+    }
+    maxParallelForks = 4
+}

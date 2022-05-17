@@ -12,7 +12,7 @@ import tools.pageobjects.HomePage;
 
 import static io.qameta.allure.Allure.step;
 
-@DisplayName("Тесты вкладки 'Communities'")
+@DisplayName("Тесты вкладки 'Сообщества'")
 @Tag("communities")
 @Epic("Сообщества")
 public class CommunityTests extends BaseTest {
