@@ -69,5 +69,5 @@ task parallelRegress(type: Test) {
     useJUnitPlatform {
         includeTags 'regress'
     }
-    maxParallelForks = 4
+    maxParallelForks = System.properties['forkCount'] ? System.properties['forkCount'].toInteger() : 1
 }
