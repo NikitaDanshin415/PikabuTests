@@ -17,13 +17,6 @@ public class SettingTest {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        ChromeOptions chromeOptions = new ChromeOptions();
-
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-infobars");
-        chromeOptions.addArguments("--disable-popup-blocking");
-        chromeOptions.addArguments("--disable-notifications");
-        chromeOptions.addArguments("--lang=en-en");
 
         if (WebDriverProvider.config.isRemote()) {
             capabilities.setCapability("enableVNC", true);
@@ -37,7 +30,6 @@ public class SettingTest {
                 + "/wd/hub";
         }
 
-        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         Configuration.browserCapabilities = capabilities;
     }
 }
