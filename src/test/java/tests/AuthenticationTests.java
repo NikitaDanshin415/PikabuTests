@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import tools.pageobjects.HomePage;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.refresh;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты формы регистрации")
@@ -82,6 +83,7 @@ public class AuthenticationTests extends BaseTest {
         });
 
         step("Авторизация с существующей учетной записью", () -> {
+            refresh();
             homePage
                 .getAuthBlock()
                 .fillLogin(UserConfigProvider.userConfig.getLogin())
