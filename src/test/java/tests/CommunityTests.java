@@ -1,9 +1,6 @@
 package tests;
 
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -26,6 +23,7 @@ public class CommunityTests extends BaseTest {
     @Tag("regress")
     @Feature("Поиск сообщества")
     @Severity(SeverityLevel.CRITICAL)
+    @AllureId("123")
     void searchTest() {
         step("Переходим на страницу 'Сообщества'", () -> {
             homePage

@@ -1,5 +1,6 @@
 package tests;
 
+import config.authconfig.UserConfigProvider;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -10,9 +11,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 @DisplayName("Тесты формы регистрации")
-@Tag("register")
+@Tag("auth")
 @Epic("Аутентификация")
-public class RegisterFormTest extends BaseTest {
+public class AuthenticationTests extends BaseTest {
     HomePage homePage = new HomePage();
 
     @Test
@@ -63,5 +64,34 @@ public class RegisterFormTest extends BaseTest {
                 .sixCharsRuleValid()
                 .allRulesIsValid();
         });
+    }
+
+    @Test
+    @DisplayName("Проверка авторизации в системе")
+    @Tag("regress")
+    @Feature("Авторизация")
+    @Severity(SeverityLevel.BLOCKER)
+    void authTest() {
+        step("Авторизация с несуществующей учетной записью", () -> {
+            homePage
+                .getAuthBlock()
+                .fillLogin("dfthertherth")
+                .fillPassword("erthertyherth")
+                .clickSignIn()
+                .checkErrorText("Ошибка. Вы ввели неверные данные авторизации");
+        });
+
+        step("Авторизация с существующей учетной записью", () -> {
+            homePage
+                .getAuthBlock()
+                .fillLogin(UserConfigProvider.userConfig.getLogin())
+                .fillPassword(UserConfigProvider.userConfig.getPassword())
+                .clickSignIn();
+
+            homePage
+                .getUserInfoBlock()
+                .userNameIs(UserConfigProvider.userConfig.getLogin());
+        });
+
     }
 }

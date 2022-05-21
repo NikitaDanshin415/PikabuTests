@@ -7,7 +7,7 @@ import org.aeonbits.owner.Config;
     "system:properties",
     "classpath:config/remoteWebDriverConfig.properties"
 })
-public interface WebDriverConfig extends Config {
+public interface MyWebDriverConfig extends Config {
     @Key("browser")
     @DefaultValue("chrome")
     String getBrowser();
