@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.refresh;
 import static io.qameta.allure.Allure.step;
 
-@DisplayName("Тесты формы регистрации")
+@DisplayName("Тесты формы аутентификации")
 @Tag("auth")
 @Epic("Аутентификация")
 public class AuthenticationTests extends BaseTest {
