@@ -72,10 +72,3 @@ task parallelRegress(type: Test) {
     }
     maxParallelForks = System.properties['forkCount'] ? System.properties['forkCount'].toInteger() : 1
 }
-
-
-task env(type: Test) {
-    useJUnitPlatform {
-        includeTags 'env'
-    }
-}
