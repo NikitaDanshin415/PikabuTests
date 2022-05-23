@@ -75,11 +75,11 @@ flowchart LR
     classDef class2 fill:#f3f76a
     classDef class3 fill:#feffd4
     
-	A[Test]:::class1 -.Использует.-> B[PageObject]:::class2
-	B -.Использует.-> C[PageElements]:::class3
-	A -.Берет данные из.-> D[OwnerConfig]
+	A[Test]:::class1 -.Использует.-o B[PageObject]:::class2
+	B -.Использует.-o C[PageElements]:::class3
+	A -.Берет данные из.-x D[OwnerConfig]
 	A --Наследуется от--> E[BaseTest]:::class1
-	E -.Берет данные из.-> D
+	E -.Берет данные из.-x D
 ```
 
 <h2>:cookie:<a name='runningTests'>Запуск тестов</a></h2>
