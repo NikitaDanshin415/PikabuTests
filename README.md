@@ -1,10 +1,9 @@
-<h1>В проекте реализованы тесты для сайта Pikabu</h1>
-
 <p align="center">
       <a href="https://pikabu.ru/">
         <img title="Pikabu" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/pikabu/Pikabu_Logo.png" />
     </a>
 </p>
+<h1>В проекте реализованы тесты для сайта Pikabu</h1>
 
 <h2>Стек проекта:</h2>
 <a href="#"><img title="Java" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/java.svg" width="30px"/></a>
