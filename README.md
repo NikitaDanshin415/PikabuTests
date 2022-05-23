@@ -16,13 +16,12 @@
 + [Результаты](#results)
   + [Allure отчет о прохождении тестов](#resultsAllure)
   + [Результаты тестирования в TMS](#resultInTms)
+  + [Результаты в Jira](#resultsInJira)
   + [Сценарии тестирования в TMS](#testCaseInTms)
   + [Уведомления](#resultNotification)
   + [Видео прохождения тестов](#resultVideo)
 
-
-
-
+    
 <h2><a name='projectStack'>:cookie:Стек проекта:</a></h2>
 <p align="center">
     <a href="#"><img title="Java" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/java.svg" width="30px"/></a>
@@ -104,25 +103,26 @@
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/4.PNG" />
 </p>
 
-<h3>:cookie:Результаты в TSM</h3>
+<h3>:cookie:<a name='resultsInTms'>Результаты в TSM</a></h3>
 После прохождения тестов, результаты автоматически имопртируются в TMS, где их может посмотреть любой участник команды.
 <p align="center">
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/5.PNG" />
 </p>
 
+<h3>:cookie:<a name='resultsInJira'>Результаты в Jira</a></h3>
 Результаты из TMS имопртируются в задачу Jira
 <p align="center">
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/8.png" />
 </p>
 
-<h2>:cookie:Сценарии тестирования в TMS</h2>
+<h3>:cookie:<a name='testCaseInTms'>Сценарии тестирования в TMS</a></h3>
 На освное написанных тестов, в системе управления тестовыми сценариями автоматически были созданы тест кейсы для пройденных тестов.
 <p align="center">
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/6.PNG" />
 </p>
 
 
-<h2>:cookie:Уведомления</h2>
+<h3>:cookie:<a name='resultNotification'>Уведомления</a></h3>
 Чтобы узнавать о результатах прохождения тестов, не обязательно постоянно следить за тестпланом в TMS или джобой в Jenkins.
 В проекте настроены уведомления в телеграм, при помощи библиотеки <b>https://github.com/qa-guru/allure-notifications</b>
 
@@ -130,7 +130,7 @@
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/7.PNG" />
 </p>
 
-<h2>:cookie:Видео прохождения тестов</h2>
+<h3>:cookie:<a name='resultVideo'>Видео прохождения тестов</a></h3>
 <p align="center">
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/pikabu.gif" />
 </p>
