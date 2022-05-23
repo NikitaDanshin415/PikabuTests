@@ -69,20 +69,18 @@
     </li>
 </ol>
 
-
-
 ```mermaid
-graph LR
-A[Test] --Использует--> B[PageObject]
-B --Использует--> C[PageElements]
-A --Берет данные из--> D[OwnerConfig]
-A --Наследуется от--> E[BaseTest]
-E --Берет данные из--> D
+flowchart LR
+    classDef class1 fill:#ffe0a1
+    classDef class2 fill:#f3f76a
+    classDef class3 fill:#feffd4
+    
+	A[Test]:::class1 -.Использует.-> B[PageObject]:::class2
+	B -.Использует.-> C[PageElements]:::class3
+	A -.Берет данные из.-> D[OwnerConfig]
+	A --Наследуется от--> E[BaseTest]:::class1
+	E -.Берет данные из.-> D
 ```
-
-<p align="center">
-    <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/9.png" />
-</p>
 
 <h2>:cookie:<a name='runningTests'>Запуск тестов</a></h2>
 
