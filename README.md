@@ -7,7 +7,23 @@
 <h1>В проекте реализованы тесты для сайта Pikabu</h1>
 Проект создан в рамках обучения в школе QA.GURU и представляет из себя часть выпускной работы.
 
-<h2>:cookie:Стек проекта:</h2>
+## Оглавление
++ [Стек проекта](#projectStack)
++ [Архитектура проекта](#projectArchitecture)
++ [Запуск тестов](#runningTests)
+    + [Запуск тестов локально](#runningTestsLocal)
+    + [Запуск тестов в Jenkins](#runningTestsJenkins)
++ [Результаты](#results)
+  + [Allure отчет о прохождении тестов](#resultsAllure)
+  + [Результаты тестирования в TMS](#resultInTms)
+  + [Сценарии тестирования в TMS](#testCaseInTms)
+  + [Уведомления](#resultNotification)
+  + [Видео прохождения тестов](#resultVideo)
+
+
+
+
+<h2><a name='projectStack'>:cookie:Стек проекта:</a></h2>
 <p align="center">
     <a href="#"><img title="Java" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/java.svg" width="30px"/></a>
     <a href="#"><img title="Gradle" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/Gradle.svg" width="50px"/></a>
@@ -19,7 +35,7 @@
     <a href="#"><img title="Allure Test Ops" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/AllureTestOps.svg" width="50px"/></a>
 </p>
 
-<h2>:cookie:Архитектура проекта</h2>
+<h2>:cookie:<a name='projectArchitecture'>Архитектура проекта</a></h2>
 Архитектура проекта состоит из 5 основных модулей
 <ol>
     <li>
@@ -46,7 +62,9 @@
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/9.png" />
 </p>
 
-<h2>:cookie:Запуск тестов локально</h2>
+<h2>:cookie:<a name='runningTests'>Запуск тестов</a></h2>
+
+<h3>:cookie:<a name='runningTestsLocal'>Запуск тестов локально</a></h3>
 
 Для запуска тестов локально используется команда : <b>gradle clean parallelRegress</b>
 
@@ -62,7 +80,7 @@
 отредактировать файл: <b>notifications/telegram.json</b>
 
 
-<h2>:cookie:Запуск тестов в Jenkins</h2>
+<h3>:cookie:<a name='runningTestsJenkins'>Запуск тестов в Jenkins</a></h3>
 В качестве CI для тестов используется Jenkins, запуск тестов осуществляется в контейнерах Selenoid.
 
 Для запуска тестов нужно создать параметризированную джобу. 
@@ -76,7 +94,8 @@
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/1.PNG.png" />
 </p>
 
-<h2>:cookie:Allure отчет о прохождении тестов</h2>
+<h2>:cookie:<a name='results'>Результаты</a></h2>
+<h3>:cookie:<a name='resultsAllure'>Allure отчет о прохождении тестов</a></h3>
 На освнове результатов тестов формируется красивый Allure отчет. По которому можно посмотреть как прошли тесты и быстро определить
 где была ошибка в случае ее обнаружения.
 
@@ -85,7 +104,7 @@
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/4.PNG" />
 </p>
 
-<h2>:cookie:Результаты</h2>
+<h3>:cookie:Результаты в TSM</h3>
 После прохождения тестов, результаты автоматически имопртируются в TMS, где их может посмотреть любой участник команды.
 <p align="center">
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/5.PNG" />
