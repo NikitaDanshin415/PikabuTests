@@ -48,8 +48,18 @@
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/1.PNG.png" />
 </p>
 
-<h2>Уведомления</h2>
-
 <h2>Результаты в TMS</h2>
+После прохождения тестов, результаты автоматически имопртируются в TMS, где их может посмотреть любой участник команды.
+<p align="center">
+    <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/5.PNG" />
+</p>
+
+<h2>Уведомления</h2>
+Чтобы узнавать о результатах прохождения тестов, не обязательно постоянно следить за тестпланом в TMS или джобой в Jenkins.
+В проекте настроены уведомления в телеграм, при помощи библиотеки AllureNotification
+
+<p align="center">
+    <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/7.PNG" />
+</p>
 
 <h2>Видео прохождения тестов</h2>
