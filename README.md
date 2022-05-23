@@ -112,3 +112,4 @@
 </p>
 
 <h2>Видео прохождения тестов</h2>
+https://www.youtube.com/watch?v=ERYv-g2l0QE
