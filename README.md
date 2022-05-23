@@ -65,7 +65,7 @@
 
 Результаты из TMS имопртируются в задачу Jira
 <p align="center">
-    <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/8.PNG" />
+    <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/8.png" />
 </p>
 
 <h2>Сценарии тестирования в TMS</h2>
