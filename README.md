@@ -48,6 +48,14 @@
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/1.PNG.png" />
 </p>
 
+<h2>Allure отчет о прохождении тестов</h2>
+На освнове результатов тестов формируется красивый Allure отчет. По которому можно посмотреть как прошли тесты и быстро определить
+где была ошибка в случае ее обнаружения.
+
+<p align="center">
+    <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/4.PNG" />
+</p>
+
 <h2>Результаты в TMS</h2>
 После прохождения тестов, результаты автоматически имопртируются в TMS, где их может посмотреть любой участник команды.
 <p align="center">
