@@ -1,11 +1,5 @@
 <h1>В проекте реализованы тесты для сайта Pikabu</h1>
 
-<div style='text-align:center; width:100%'>
-    <a href="https://pikabu.ru/">
-        <img title="Pikabu" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/pikabu/Pikabu_Logo.png" />
-    </a>
-</div>
-
 <p align="center">
       <a href="https://pikabu.ru/">
         <img title="Pikabu" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/pikabu/Pikabu_Logo.png" />
