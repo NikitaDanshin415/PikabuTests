@@ -33,6 +33,17 @@
     <a href="#"><img title="Selenoid" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/Selenoid.svg" width="50px"/></a>
     <a href="#"><img title="Allure Test Ops" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/AllureTestOps.svg" width="50px"/></a>
 </p>
+<code>
+Java - используется как основной язык для написания тестов<br>
+Gradle - используется для сборки проекта<br>
+Junit5 - тестовый фремворк<br>
+Selenide - библиотека для работы с UI элементами страницы<br>
+Allure - для формирования отчетов<br>
+Jenkins - используется для запуска тестов<br>
+Selenoid - используется для создания контейнеров для прохождения тестов<br>
+AllureTestOps - система управления тестовыми сценариями
+</code>
+
 
 <h2>:cookie:<a name='projectArchitecture'>Архитектура проекта</a></h2>
 Архитектура проекта состоит из 5 основных модулей
