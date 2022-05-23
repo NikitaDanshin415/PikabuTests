@@ -6,7 +6,7 @@
 
 <h1>В проекте реализованы тесты для сайта Pikabu</h1>
 Проект создан в рамках обучения в школе QA.GURU и представляет из себя часть выпускной работы.
-
+  
 ## Оглавление
 + [Стек проекта](#projectStack)
 + [Архитектура проекта](#projectArchitecture)
@@ -69,6 +69,16 @@
     </li>
 </ol>
 
+
+
+```mermaid
+graph LR
+A[Test] --Использует--> B[PageObject]
+B --Использует--> C[PageElements]
+A --Берет данные из--> D[OwnerConfig]
+A --Наследуется от--> E[BaseTest]
+E --Берет данные из--> D
+```
 
 <p align="center">
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/9.png" />
