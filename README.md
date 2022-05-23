@@ -1,6 +1,6 @@
 <h1>В проекте реализованы тесты для сайта Pikabu</h1>
 
-
+<a href="https://pikabu.ru/"><img title="Pikabu" src="https://github.com/NikitaDanshin415/NikitaDanshin415/tree/main/pikabu/Pikabu_Logo.png" width="30px"/></a>
 
 <a href="#"><img title="Java" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/java.svg" width="30px"/></a>
 <a href="#"><img title="Gradle" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/Gradle.svg" width="50px"/></a>
