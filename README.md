@@ -19,21 +19,6 @@
     <a href="#"><img title="Allure Test Ops" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/AllureTestOps.svg" width="50px"/></a>
 </p>
 
-<h2>Запуск тестов локально</h2>
-
-Для запуска тестов локально используется команда : <b>gradle clean parallelRegress</b>
-
-<p><b>-DforkCount</b> - количество потоков для запуска теста</p>
-<p><b>-Dbrowser</b> - браузер для запуска теста</p>
-
-Для работы тестов подразумевающих авторизацию в системе нужно дополнительно указать параметры:
-<p><b>-Dlogin</b> - логин для Pikabu</p>
-<p><b>-Dpassword</b> - пароль для Pikabu</p>
-<p>P.S. Либо прописать их в конфигурационном файле <b>resources/config/userConfig.properties</b></p>
-
-Так же необходимо указать токен бота и чат в который должны приходить уведомление в телеграмм. Для этого нужно
-отредактировать файл: <b>notifications/telegram.json</b>
-
 <h2>Архитектура проекта</h2>
 Архитектура проекта состоит из 5 основных модулей
 <ol>
@@ -60,6 +45,22 @@
 <p align="center">
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/9.png" />
 </p>
+
+<h2>Запуск тестов локально</h2>
+
+Для запуска тестов локально используется команда : <b>gradle clean parallelRegress</b>
+
+<p><b>-DforkCount</b> - количество потоков для запуска теста</p>
+<p><b>-Dbrowser</b> - браузер для запуска теста</p>
+
+Для работы тестов подразумевающих авторизацию в системе нужно дополнительно указать параметры:
+<p><b>-Dlogin</b> - логин для Pikabu</p>
+<p><b>-Dpassword</b> - пароль для Pikabu</p>
+<p>P.S. Либо прописать их в конфигурационном файле <b>resources/config/userConfig.properties</b></p>
+
+Так же необходимо указать токен бота и чат в который должны приходить уведомление в телеграмм. Для этого нужно
+отредактировать файл: <b>notifications/telegram.json</b>
+
 
 <h2>Запуск тестов в Jenkins</h2>
 В качестве CI для тестов используется Jenkins, запуск тестов осуществляется в контейнерах Selenoid.
