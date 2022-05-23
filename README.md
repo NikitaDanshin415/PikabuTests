@@ -64,7 +64,7 @@
 
 <h2>Уведомления</h2>
 Чтобы узнавать о результатах прохождения тестов, не обязательно постоянно следить за тестпланом в TMS или джобой в Jenkins.
-В проекте настроены уведомления в телеграм, при помощи библиотеки AllureNotification
+В проекте настроены уведомления в телеграм, при помощи библиотеки <b>https://github.com/qa-guru/allure-notifications</b>
 
 <p align="center">
     <img title="Jenkins" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/7.PNG" />
