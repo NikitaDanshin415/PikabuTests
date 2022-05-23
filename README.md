@@ -112,4 +112,6 @@
 </p>
 
 <h2>Видео прохождения тестов</h2>
-https://www.youtube.com/watch?v=ERYv-g2l0QE
+<p align="center">
+  https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/diploma_1/3ad60fd1315d88559f6d68a46d356e71.mp4
+</p>
