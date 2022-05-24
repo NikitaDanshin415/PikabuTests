@@ -23,8 +23,6 @@ public class AuthenticationTests extends BaseTest {
     @Feature("Регистрация")
     @Severity(SeverityLevel.BLOCKER)
     void registerTest() {
-        $(".button_main.button_success")
-            .click();
 
         step("Открываем форму регистрации", () -> {
             homePage
