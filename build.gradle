@@ -59,13 +59,6 @@ tasks.withType(Test) {
     }
 }
 
-task regress(type: Test) {
-    useJUnitPlatform {
-        includeTags 'regress'
-        excludeTags 'smoke'
-    }
-}
-
 task parallelRegress(type: Test) {
     useJUnitPlatform {
         includeTags 'regress'
