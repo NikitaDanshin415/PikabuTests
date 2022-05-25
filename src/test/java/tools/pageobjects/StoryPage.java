@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class StoryPage {
     private final SelenideElement ratingUpBtn = $(".story__left.story__left_no-padding .story__rating-up");
 
+    @Step("Нажать на кнопку повышения рейтинга")
     public StoryPage clickRatingUpBtn(){
         ratingUpBtn
             .click();
