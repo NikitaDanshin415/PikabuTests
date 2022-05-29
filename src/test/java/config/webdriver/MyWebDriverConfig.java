@@ -12,7 +12,7 @@ public interface MyWebDriverConfig extends Config {
     @DefaultValue("chrome")
     String getBrowser();
 
-    @Key("url")
+    @Key("appUrl")
     String getUrl();
 
     @Key("isRemote")
