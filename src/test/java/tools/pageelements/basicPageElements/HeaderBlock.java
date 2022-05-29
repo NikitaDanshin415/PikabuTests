@@ -1,4 +1,4 @@
-package tools.pageelements;
+package tools.pageelements.basicPageElements;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
@@ -9,7 +9,7 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class Header {
+public class HeaderBlock {
     private final ElementsCollection headerMenuItems = $$(".header-menu .header-menu__item");
     private final SelenideElement hotItem = $("[data-feed-key='hot']");
     private final SelenideElement bestItem = $("[data-feed-key='best']");
@@ -19,7 +19,7 @@ public class Header {
     private final SelenideElement companiesItem = $("[data-feed-key='companies']");
 
     @Step("Проверка количества кнопок в заголовке")
-    public Header checkHeaderElementsSize() {
+    public HeaderBlock checkHeaderElementsSize() {
         headerMenuItems
             .shouldHave(CollectionCondition.size(6));
 
@@ -27,42 +27,42 @@ public class Header {
     }
 
     @Step("Проверка отображения элемента 'Горячее'")
-    public Header headerHaveHotItem() {
+    public HeaderBlock headerHaveHotItem() {
         elementShouldBeOnPage(hotItem, "Горячее");
 
         return this;
     }
 
     @Step("Проверка отображения элемента 'Лучшее'")
-    public Header headerHaveBestItem() {
+    public HeaderBlock headerHaveBestItem() {
         elementShouldBeOnPage(bestItem, "Лучшее");
 
         return this;
     }
 
     @Step("Проверка отображения элемента 'Свежее'")
-    public Header headerHaveNewItem() {
+    public HeaderBlock headerHaveNewItem() {
         elementShouldBeOnPage(newItem, "Свежее");
 
         return this;
     }
 
     @Step("Проверка отображения элемента 'Подписки'")
-    public Header headerHaveSubsItem() {
+    public HeaderBlock headerHaveSubsItem() {
         elementShouldBeOnPage(subsItem, "Подписки");
 
         return this;
     }
 
     @Step("Проверка отображения элемента 'Сообщества'")
-    public Header headerHaveCommunitiesItem() {
+    public HeaderBlock headerHaveCommunitiesItem() {
         elementShouldBeOnPage(communitiesItem, "Сообщества");
 
         return this;
     }
 
     @Step("Проверка отображения элемента 'Компании'")
-    public Header headerHaveCompaniesItem() {
+    public HeaderBlock headerHaveCompaniesItem() {
         elementShouldBeOnPage(companiesItem, "Компании");
 
         return this;

@@ -10,24 +10,27 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class SettingTest {
     public void configure(){
         Configuration.browser = MyWebDriverProvider.config.getBrowser();
-        Configuration.baseUrl = "https://pikabu.ru/";
+        Configuration.baseUrl = MyWebDriverProvider.config.getUrl();
         Configuration.browserSize = "1920x1080";
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
         if (MyWebDriverProvider.config.isRemote()) {
-            capabilities.setCapability("enableVNC", true);
-            capabilities.setCapability("enableVideo", true);
-
-            Configuration.remote = "https://"
-                + MyWebDriverProvider.config.getRemoteLogin()
-                + ":" + MyWebDriverProvider.config.getRemotePassword()
-                + "@"
-                + MyWebDriverProvider.config.getRemoteDriverUrl()
-                + "/wd/hub";
+           configureSelenoid();
         }
+    }
 
+    private void configureSelenoid(){
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
+
+        Configuration.remote = "https://"
+            + MyWebDriverProvider.config.getRemoteLogin()
+            + ":" + MyWebDriverProvider.config.getRemotePassword()
+            + "@"
+            + MyWebDriverProvider.config.getRemoteDriverUrl()
+            + "/wd/hub";
     }
 }

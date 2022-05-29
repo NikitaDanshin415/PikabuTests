@@ -1,8 +1,10 @@
-package tools.pageelements;
+package tools.pageelements.basicPageElements;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import tools.pageelements.formElements.InputField;
+import tools.pageelements.formElements.PasswordField;
 
 
 import static com.codeborne.selenide.Selenide.$;

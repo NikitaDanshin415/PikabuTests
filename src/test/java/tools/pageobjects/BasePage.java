@@ -1,13 +1,13 @@
 package tools.pageobjects;
 
-import tools.pageelements.AuthBlock;
-import tools.pageelements.Header;
-import tools.pageelements.RegisterBlock;
-import tools.pageelements.UserInfoBlock;
+import tools.pageelements.basicPageElements.AuthBlock;
+import tools.pageelements.basicPageElements.HeaderBlock;
+import tools.pageelements.basicPageElements.RegisterBlock;
+import tools.pageelements.basicPageElements.UserInfoBlock;
 
 public abstract class BasePage {
-    public Header getHeader() {
-        return new Header();
+    public HeaderBlock getHeader() {
+        return new HeaderBlock();
     }
 
     public RegisterBlock getRegisterBlock() {

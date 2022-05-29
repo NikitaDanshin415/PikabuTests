@@ -1,4 +1,4 @@
-package tools.pageelements;
+package tools.pageelements.basicPageElements;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class AuthBlock {
     private final SelenideElement registerBtn = $("#signin-form .auth__action");
-    private final SelenideElement signinBtn = $("#signin-form button[type='submit']");
+    private final SelenideElement signInBtn = $("#signin-form button[type='submit']");
 
     private final SelenideElement errorSpan = $("#signin-form span.auth__error");
 
@@ -23,7 +23,7 @@ public class AuthBlock {
 
     @Step("Нажать на кнопку 'Войти' в блоке авторизации")
     public AuthBlock clickSignIn(){
-        signinBtn
+        signInBtn
             .click();
 
         return this;

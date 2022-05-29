@@ -17,7 +17,6 @@ public class CommunityTests extends BaseTest {
     CommunitiesPage communitiesPage = new CommunitiesPage();
     String communityName = "Лига тестировщиков";
 
-
     @Test
     @DisplayName("Проверка поиска сообщества")
     @Tag("regress")

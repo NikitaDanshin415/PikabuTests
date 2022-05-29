@@ -34,6 +34,8 @@
     <a href="#"><img title="Allure Test Ops" src="https://github.com/NikitaDanshin415/NikitaDanshin415/blob/main/logo/AllureTestOps.svg" width="50px"/></a>
 </p>
 
+
+
 <ul>
 	<li>Java - используется как основной язык для написания тестов</li>
 	<li>Gradle - используется для сборки проекта</li>

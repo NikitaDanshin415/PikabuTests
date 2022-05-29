@@ -6,7 +6,7 @@ import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tools.pageelements.popup.RegisterPopup;
+import tools.pageelements.popup.NotificationPopup;
 import tools.pageobjects.HomePage;
 import tools.pageobjects.StoryPage;
 
@@ -36,8 +36,8 @@ public class StoryTests extends BaseTest {
         });
 
         step("Проверяем, что появилось окно регистрации", () -> {
-            new RegisterPopup()
-                .popupIsVisible();
+            new NotificationPopup()
+                .formIsVisible("Регистрация");
         });
     }
 }

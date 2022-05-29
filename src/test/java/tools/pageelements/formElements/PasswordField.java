@@ -1,4 +1,4 @@
-package tools.pageelements;
+package tools.pageelements.formElements;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
@@ -14,6 +14,7 @@ public class PasswordField extends InputField {
     private final SelenideElement moreThat6chars = rulesList.get(0);
     private final SelenideElement minimumOneLetter = rulesList.get(1);
     private final SelenideElement minimumOneDigit = rulesList.get(2);
+
 
     public void allRulesClear() {
         rulesList
