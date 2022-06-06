@@ -5,7 +5,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tools.pageobjects.HomePage;
+import pages.HomePage;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.refresh;
@@ -26,13 +26,13 @@ public class AuthenticationTests extends BaseTest {
 
         step("Открываем форму регистрации", () -> {
             homePage
-                .getAuthBlock()
+                .authBlock()
                 .clickRegisterBtn();
         });
 
         step("Проверка поля Email", () -> {
             homePage
-                .getRegisterBlock()
+                .registerBlock()
                 .formIsVisible()
                 .fillEmail("test")
                 .emailIsNotValid("Неверный email")
@@ -42,7 +42,7 @@ public class AuthenticationTests extends BaseTest {
 
         step("Проверка поля NickName", () -> {
             homePage
-                .getRegisterBlock()
+                .registerBlock()
                 .formIsVisible()
                 .fillNickName("test")
                 .nickNameIsNotValid("Логин занят")
@@ -52,7 +52,7 @@ public class AuthenticationTests extends BaseTest {
 
         step("Проверка поля Password", () -> {
             homePage
-                .getRegisterBlock()
+                .registerBlock()
                 .formIsVisible()
                 .checkClearRules()
                 .fillPassword("test")
@@ -73,7 +73,7 @@ public class AuthenticationTests extends BaseTest {
     void authTest() {
         step("Авторизация с несуществующей учетной записью", () -> {
             homePage
-                .getAuthBlock()
+                .authBlock()
                 .fillLogin("dfthertherth")
                 .fillPassword("erthertyherth")
                 .clickSignIn()
@@ -83,15 +83,14 @@ public class AuthenticationTests extends BaseTest {
         step("Авторизация с существующей учетной записью", () -> {
             refresh();
             homePage
-                .getAuthBlock()
-                .fillLogin(UserConfigProvider.userConfig.getLogin())
-                .fillPassword(UserConfigProvider.userConfig.getPassword())
+                .authBlock()
+                .fillLogin(UserConfigProvider.userConfig.login())
+                .fillPassword(UserConfigProvider.userConfig.password())
                 .clickSignIn();
 
             homePage
-                .getUserInfoBlock()
-                .userNameIs(UserConfigProvider.userConfig.getLogin());
+                .userInfoBlock()
+                .userNameIs(UserConfigProvider.userConfig.login());
         });
-
     }
 }

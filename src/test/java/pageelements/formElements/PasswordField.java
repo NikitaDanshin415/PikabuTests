@@ -1,8 +1,11 @@
-package tools.pageelements.formElements;
+package pageelements.formElements;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+
+import static com.codeborne.selenide.Condition.cssClass;
+import static com.codeborne.selenide.Condition.empty;
 
 public class PasswordField extends InputField {
     public PasswordField(SelenideElement field) {
@@ -15,15 +18,13 @@ public class PasswordField extends InputField {
     private final SelenideElement minimumOneLetter = rulesList.get(1);
     private final SelenideElement minimumOneDigit = rulesList.get(2);
 
-
     public void allRulesClear() {
         rulesList
             .asDynamicIterable()
             .forEach(e -> {
                 e.$(".requirements-hint__rule__icon")
-                    .shouldBe(Condition.empty);
+                    .shouldBe(empty);
             });
-
     }
 
     public void allRulesValid() {
@@ -31,31 +32,25 @@ public class PasswordField extends InputField {
             .asFixedIterable()
             .forEach(e -> {
                 e.$("svg")
-                    .shouldHave(Condition.cssClass("icon--auth__success"));
+                    .shouldHave(cssClass("icon--auth__success"));
             });
-
     }
 
     public void sixCharsRuleValid() {
         ruleValid(moreThat6chars);
-
     }
 
     public void oneLetterRuleValid() {
         ruleValid(minimumOneLetter);
-
     }
 
     public void oneDigitRuleValid() {
         ruleValid(minimumOneDigit);
-
     }
 
     private void ruleValid(SelenideElement el) {
         el
             .$("svg")
-            .shouldHave(Condition.cssClass("icon--auth__success"));
+            .shouldHave(cssClass("icon--auth__success"));
     }
-
-
 }

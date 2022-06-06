@@ -6,9 +6,9 @@ import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tools.pageelements.popup.NotificationPopup;
-import tools.pageobjects.HomePage;
-import tools.pageobjects.StoryPage;
+import pageelements.popup.NotificationPopup;
+import pages.HomePage;
+import pages.StoryPage;
 
 import static io.qameta.allure.Allure.step;
 
@@ -17,6 +17,8 @@ import static io.qameta.allure.Allure.step;
 @Epic("Истории")
 public class StoryTests extends BaseTest {
     HomePage homePage = new HomePage();
+    StoryPage storyPage = new StoryPage();
+    NotificationPopup notificationPopup = new NotificationPopup();
 
     @Test
     @DisplayName("Повысить рейтинг без авторизации")
@@ -25,18 +27,18 @@ public class StoryTests extends BaseTest {
     void articleTest() {
         step("Открываем пост", () -> {
             homePage
-                .openStory();
+                .openFirstArticle();
 
             Selenide.switchTo().window(1);
         });
 
         step("Нажимаем на кнопку повышения рейтинга", () -> {
-            new StoryPage()
+            storyPage
                 .clickRatingUpBtn();
         });
 
         step("Проверяем, что появилось окно регистрации", () -> {
-            new NotificationPopup()
+            notificationPopup
                 .formIsVisible("Регистрация");
         });
     }

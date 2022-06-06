@@ -1,12 +1,12 @@
-package tools.pageelements.basicPageElements;
+package pageelements.basicPageElements;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import tools.pageelements.formElements.InputField;
-import tools.pageelements.formElements.PasswordField;
+import pageelements.formElements.InputField;
+import pageelements.formElements.PasswordField;
 
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class RegisterBlock {
@@ -20,15 +20,16 @@ public class RegisterBlock {
      * Проверка видимости формы.
      */
     @Step("Форма отображается")
-    public RegisterBlock formIsVisible(){
+    public RegisterBlock formIsVisible() {
         registerForm
-            .shouldBe(Condition.visible);
+            .shouldBe(visible);
 
         return this;
     }
 
     /**
      * Заполнение поля Email.
+     *
      * @param text - текст который будет введен в поле.
      */
     @Step("Вводим значение {text} в поле Email")
@@ -63,6 +64,7 @@ public class RegisterBlock {
 
     /**
      * Заполнение поля Nickname.
+     *
      * @param text - текст, который будет введен в поле Nickname.
      */
     @Step("Вводим значение {text} в поле Nickname")
@@ -86,6 +88,7 @@ public class RegisterBlock {
 
     /**
      * Заполнение поля Nickname.
+     *
      * @param text - текст, который будет введен в поле Nickname.
      */
     @Step("Поле Nickname не прошло валидацию")
@@ -98,6 +101,7 @@ public class RegisterBlock {
 
     /**
      * Заполнение поля Password.
+     *
      * @param text - текст, который будет введен в поле Password.
      */
     @Step("Заполнение поля Password")
