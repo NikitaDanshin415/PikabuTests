@@ -4,8 +4,8 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tools.pageobjects.CommunitiesPage;
-import tools.pageobjects.HomePage;
+import pages.CommunitiesPage;
+import pages.HomePage;
 
 import static io.qameta.allure.Allure.step;
 
@@ -26,7 +26,7 @@ public class CommunityTests extends BaseTest {
     void searchTest() {
         step("Переходим на страницу 'Сообщества'", () -> {
             homePage
-                .getHeader()
+                .header()
                 .openCommunities();
         });
 

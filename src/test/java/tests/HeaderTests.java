@@ -6,7 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
-import tools.pageobjects.HomePage;
+import pages.HomePage;
 
 @DisplayName("Тесты шапки сайта")
 @Tags(value = {@Tag("header"), @Tag("smoke")})
@@ -20,7 +20,7 @@ public class HeaderTests extends BaseTest {
     @Feature("Проверка наличия всех элементов боковой панели")
     void headerElementsTest() {
         homePage
-            .getHeader()
+            .header()
             .checkHeaderElementsSize()
             .headerHaveHotItem()
             .headerHaveBestItem()

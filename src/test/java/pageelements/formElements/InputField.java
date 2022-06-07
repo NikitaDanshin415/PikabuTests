@@ -1,8 +1,10 @@
-package tools.pageelements.formElements;
+package pageelements.formElements;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import tools.pageelements.popup.NotificationPopup;
+import pageelements.popup.NotificationPopup;
+
+import static com.codeborne.selenide.Condition.cssClass;
 
 public class InputField {
 
@@ -12,7 +14,7 @@ public class InputField {
         inputField = field;
     }
 
-    public InputField fill(String text){
+    public InputField fill(String text) {
         inputField
             .setValue(text)
             .pressTab();
@@ -23,7 +25,7 @@ public class InputField {
     public InputField fieldIsValid() {
         inputField
             .parent().parent()
-            .shouldNotHave(Condition.cssClass("input_error"));
+            .shouldNotHave(cssClass("input_error"));
 
         return this;
     }
@@ -31,7 +33,7 @@ public class InputField {
     public InputField fieldIsNotValid(String text) {
         inputField
             .parent().parent()
-            .shouldHave(Condition.cssClass("input_error"));
+            .shouldHave(cssClass("input_error"));
 
         new NotificationPopup()
             .formIsVisible(text);

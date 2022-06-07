@@ -1,4 +1,4 @@
-package tools.pageelements.basicPageElements;
+package pageelements.basicPageElements;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
@@ -6,6 +6,9 @@ import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
+import static com.codeborne.selenide.CollectionCondition.size;
+import static com.codeborne.selenide.Condition.cssClass;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -20,8 +23,7 @@ public class HeaderBlock {
 
     @Step("Проверка количества кнопок в заголовке")
     public HeaderBlock checkHeaderElementsSize() {
-        headerMenuItems
-            .shouldHave(CollectionCondition.size(6));
+        headerMenuItems.shouldHave(size(6));
 
         return this;
     }
@@ -70,18 +72,16 @@ public class HeaderBlock {
 
     @Step("Открытие вкладки 'Сообщества'")
     public void openCommunities() {
-        communitiesItem
-            .click();
+        communitiesItem.click();
 
         communitiesItem
-            .shouldHave(Condition.cssClass("header-menu__item_current")
+            .shouldHave(cssClass("header-menu__item_current")
                 .because("Выбранная вкладка должна иметь CSS класс header-menu__item_current"));
     }
 
-
     private void elementShouldBeOnPage(SelenideElement el, String name) {
         el
-            .shouldBe(Condition.visible
+            .shouldBe(visible
                 .because("Элемент '" + name + "' должен отображаться на странице"));
     }
 }
